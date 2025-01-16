@@ -64,7 +64,7 @@ v1.0.8 / 2019-02-10
   * feat: add dicom type
   * Merge pull request #58 from Fentonz/master
   * Merge pull request #59 from kmanley/master
-  * fix example; related to h2non/filetype#43
+  * fix example; related to miihael/filetype#43
   * Added DICOM type to archive
 
 

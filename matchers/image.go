@@ -1,6 +1,6 @@
 package matchers
 
-import "github.com/h2non/filetype/matchers/isobmff"
+import "github.com/miihael/filetype/matchers/isobmff"
 
 var (
 	TypeJpeg     = newType("jpg", "image/jpeg")

@@ -8,7 +8,7 @@ import (
 )
 
 // Types stores a map of supported types
-var Types = types.Types
+var Types = &types.Types
 
 // NewType creates and registers a new type
 var NewType = types.NewType

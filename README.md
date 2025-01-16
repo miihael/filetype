@@ -2,8 +2,6 @@
 
 Small and dependency free [Go](https://golang.org) package to infer file and MIME type checking the [magic numbers](<https://en.wikipedia.org/wiki/Magic_number_(programming)#Magic_numbers_in_files>) signature.
 
-For SVG file type checking, see [go-is-svg](https://github.com/h2non/go-is-svg) package. Python port: [filetype.py](https://github.com/miihael/filetype.py).
-
 ## Features
 
 - Supports a [wide range](#supported-types) of file types
@@ -14,7 +12,7 @@ For SVG file type checking, see [go-is-svg](https://github.com/h2non/go-is-svg) 
 - [Pluggable](#add-additional-file-type-matchers): add custom new types and matchers
 - Simple and semantic API
 - [Blazing fast](#benchmarks), even processing large files
-- Only first 262 bytes representing the max file header is required, so you can just [pass a slice](#file-header)
+- Only first 377 bytes representing the max file header is required, so you can just [pass a slice](#file-header)
 - Dependency free (just Go code, no C compilation needed)
 - Cross-platform file recognition
 

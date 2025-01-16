@@ -3,7 +3,7 @@ package types
 import "sync"
 
 // Types Support concurrent map writes
-var Types *sync.Map
+var Types sync.Map
 
 // Add registers a new type in the package
 func Add(t Type) Type {

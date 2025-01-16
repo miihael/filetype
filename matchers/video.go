@@ -13,6 +13,7 @@ var (
 	TypeMpeg = newType("mpg", "video/mpeg")
 	TypeFlv  = newType("flv", "video/x-flv")
 	Type3gp  = newType("3gp", "video/3gpp")
+	TypeMP2T = newType("mp2t", "video/MP2T")
 )
 
 var Video = Map{
@@ -26,6 +27,7 @@ var Video = Map{
 	TypeMpeg: Mpeg,
 	TypeFlv:  Flv,
 	Type3gp:  Match3gp,
+	TypeMP2T: MpegTransportStream,
 }
 
 func M4v(buf []byte) bool {
@@ -143,4 +145,10 @@ func containsMatroskaSignature(buf, subType []byte) bool {
 	}
 
 	return buf[index-3] == 0x42 && buf[index-2] == 0x82
+}
+
+func MpegTransportStream(buf []byte) bool {
+	return len(buf) > 376 &&
+		buf[0] == 0x47 && buf[2] == 0x00 &&
+		buf[188] == 0x47 && buf[376] == 0x47
 }

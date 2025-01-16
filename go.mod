@@ -1,3 +1,3 @@
 module github.com/miihael/filetype
 
-go 1.13
+go 1.23.2
